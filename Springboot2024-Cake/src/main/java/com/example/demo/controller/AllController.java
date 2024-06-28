@@ -17,4 +17,4 @@ public class AllController {
     public String showShoppingPage() {
         return "shoppingnote"; // 返回購物須知頁面
     }
-}
+} 
