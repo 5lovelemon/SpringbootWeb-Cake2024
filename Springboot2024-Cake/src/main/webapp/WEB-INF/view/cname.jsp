@@ -41,34 +41,42 @@
   <div class="background-container">
     <div class="login-container">
       <h2>會員登入</h2>
+      
       <form id="loginForm" action="/cname" method="post" onsubmit="return validateForm()">
         <div class="form-group">
           <label for="email">帳號：</label>
           <input type="email" id="email" name="email" required>
         </div>
+        
         <div class="form-group">
           <label for="password">密碼：</label>
           <input type="password" id="password" name="password" required>
         </div>
+        
         <div class="form-group">
           <label for="captcha">驗證碼：</label>
           <input type="text" id="captcha" name="captcha" required>
           <img src="/captcha" alt="Captcha Image">
         </div>
+        
         <div class="form-group-checkbox">
           <input type="checkbox" id="keep-login" name="keep-login">
           <label for="keep-login">保持登入</label>
           <a href="#" class="forgot-password">忘記密碼？</a>
         </div>
+        
         <button type="submit">登入</button>
       </form>
+      
       <div class="register-link">
         <div style="float: left;">
           還不是會員？<a href="/account">註冊會員</a>
         </div>
+        
         <div style="float: right;">
           <a href="/cake">返回首頁</a>
         </div>
+        
         <div style="clear: both;">
         </div>
       </div>
