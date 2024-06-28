@@ -53,12 +53,6 @@
           <input type="password" id="password" name="password" required>
         </div>
         
-        <div class="form-group">
-          <label for="captcha">驗證碼：</label>
-          <input type="text" id="captcha" name="captcha" required>
-          <img src="/captcha" alt="Captcha Image">
-        </div>
-        
         <div class="form-group-checkbox">
           <input type="checkbox" id="keep-login" name="keep-login">
           <label for="keep-login">保持登入</label>
@@ -92,13 +86,12 @@
 
       var email = document.getElementById("email").value;
       var password = document.getElementById("password").value;
-      var captcha = document.getElementById("captcha").value;
 
       // 进行必要的验证，例如检查邮箱格式等
-      if (!email || !password || !captcha) {
+      if (!email || !password) {
         Swal.fire({
           icon: 'warning',
-          title: '請填寫完整的帳號、密碼和驗證碼！',
+          title: '請填寫完整的帳號、密碼',
           confirmButtonText: '確定'
         });
         return false;
@@ -112,8 +105,7 @@
         },
         body: new URLSearchParams({
           email: email,
-          password: password,
-          captcha: captcha
+          password: password
         })
       })
       .then(response => {

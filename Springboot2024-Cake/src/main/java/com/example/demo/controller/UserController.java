@@ -59,22 +59,10 @@ public class UserController {
     }
 
     @PostMapping("/cname")
-    public String login(@RequestParam String email, @RequestParam String password, @RequestParam String captcha, Model model, HttpSession session) {
-    	
-    	// 验证验证码
-        String sessionCaptcha = (String) session.getAttribute("captcha");
-        if (sessionCaptcha == null || !sessionCaptcha.equals(captcha)) {
-            model.addAttribute("message", "驗證碼錯誤");
-            return "cname";
-        }
-    	
-    	// userService.getUserByEmail() 方法用于根据 email 获取用户信息
+    public String login(@RequestParam String email, @RequestParam String password, Model model, HttpSession session) {
         Optional<User> userOpt = userService.getUserByEmail(email);
         if (userOpt.isPresent() && userOpt.get().getPassword().equals(password)) {
         	session.setAttribute("loggedInUser", userOpt.get());
-        	
-        	// 登录成功时设置成功信息并重定向到首页
-            model.addAttribute("message", "登入成功");
             return "redirect:/cake"; // 登入成功，跳转到首页
         } else {
             model.addAttribute("message", "登入失敗，用戶名或密碼錯誤");
