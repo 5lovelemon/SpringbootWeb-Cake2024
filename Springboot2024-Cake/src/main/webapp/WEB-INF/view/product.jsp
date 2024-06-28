@@ -184,9 +184,9 @@
         <button class="nav-link active" id="p1-tab" data-bs-toggle="tab" data-bs-target="#p1" type="button" role="tab"
           aria-controls="p1" aria-selected="true">巧克力系列</button>
         <button class="nav-link" id="p2-tab" data-bs-toggle="tab" data-bs-target="#p2" type="button" role="tab"
-          aria-controls="p2" aria-selected="false">抹茶系列</button>
+          aria-controls="p2" aria-selected="false">草莓系列</button>
         <button class="nav-link" id="p3-tab" data-bs-toggle="tab" data-bs-target="#p3" type="button" role="tab"
-          aria-controls="p3" aria-selected="false">水果系列</button>
+          aria-controls="p3" aria-selected="false">抹茶系列</button>
       </div>
     </nav>
 
@@ -199,8 +199,8 @@
 
             <!-- d-block 文字一定下去,w-100縮小 一定百分百, mw-100 最大寬度百分百 -->
             <div class="col-12 com-sm-6 col-md-3 p-4" data-bs-toggle="modal" data-bs-target="#prodModal1">
-              <img src="../images/sec1.jpg" class="d-block mw-100 mx-auto rounded mb-2" alt="橘子蛋糕">
-              <p class="text-center">橘子蛋糕</p>
+              <img src="../images/sec1.jpg" class="d-block mw-100 mx-auto rounded mb-2" alt="巧克力核桃蛋糕">
+              <p class="text-center">巧克力核桃蛋糕</p>
             </div>
 
 
@@ -208,18 +208,18 @@
               <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="prodModal1Label">橘子蛋糕</h5>
+                    <h5 class="modal-title" id="prodModal1Label">巧克力核桃蛋糕</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                     <div class="row">
                       <div class="col-md-6">
-                        <img src="../images/sec1.jpg" class="img-fluid rounded" alt="橘子蛋糕">
+                        <img src="../images/sec1.jpg" class="img-fluid rounded" alt="巧克力核桃蛋糕">
                       </div>
                       <div class="col-md-6">
                     <p><strong>蛋糕編號：</strong> 01</p>
-                    <p><strong>蛋糕名字：</strong> 橘子蛋糕</p>
-                    <p><strong>蛋糕價格：</strong> $90</p>
+                    <p><strong>蛋糕名字：</strong> 巧克力核桃蛋糕</p>
+                    <p><strong>蛋糕價格：</strong> $150</p>
                     <form action="${pageContext.request.contextPath}/add-to-cart" method="post">
                       <input type="hidden" name="cakeId" value="1"> <!-- 設置正確 商品cakeId -->
                       <div class="mb-3">
@@ -237,27 +237,27 @@
             
           
 
-            <div class="col-12 com-sm-6 col-md-3 p-4" data-bs-toggle="modal" data-bs-target="#prodModal2">
-              <img src="../images/sec2.jpg" class="d-block mw-100 mx-auto rounded mb-2" alt="原味蛋糕">
-              <p class="text-center">原味蛋糕</p>
+            <div class="col-12 com-sm-6 col-md-3 p-4" data-bs-toggle="modal" data-bs-target="#prodModal2"> <!-- prodModal? 要改數字  -->
+              <img src="../images/sec2.jpg" class="d-block mw-100 mx-auto rounded mb-2" alt="玫瑰巧克力蛋糕">
+              <p class="text-center">玫瑰巧克力蛋糕</p>
             </div>
-            
+            <!-- prodModal? 要改數字  -->
             <div class="modal fade" id="prodModal2" tabindex="-1" aria-labelledby="prodModal2Label" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="prodModal2Label">原味蛋糕</h5>
+                    <h5 class="modal-title" id="prodModal2Label">玫瑰巧克力蛋糕</h5> <!-- prodModal?Label 要改數字  -->
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                     <div class="row">
                       <div class="col-md-6">
-                        <img src="../images/sec2.jpg" class="img-fluid rounded" alt="原味蛋糕">
+                        <img src="../images/sec2.jpg" class="img-fluid rounded" alt="玫瑰巧克力蛋糕">
                       </div>
                       <div class="col-md-6">
                         <p><strong>蛋糕編號：</strong> 02</p>
-                        <p><strong>蛋糕名字：</strong> 原味蛋糕</p>
-                        <p><strong>蛋糕價格：</strong> $80</p>
+                        <p><strong>蛋糕名字：</strong> 玫瑰巧克力蛋糕</p>
+                        <p><strong>蛋糕價格：</strong> $150</p>
                         <form action="${pageContext.request.contextPath}/add-to-cart" method="post">
                       		<input type="hidden" name="cakeId" value="2"> <!-- 設置正確 商品cakeId -->
                       	<div class="mb-3">
@@ -275,26 +275,26 @@
             
 
             <div class="col-12 com-sm-6 col-md-3 p-4" data-bs-toggle="modal" data-bs-target="#prodModal3">
-              <img src="../images/sec3.jpg" class="d-block mw-100 mx-auto rounded mb-2" alt="巧克力蛋糕">
-              <p class="text-center">巧克力蛋糕</p>
+              <img src="../images/sec3.jpg" class="d-block mw-100 mx-auto rounded mb-2" alt="醇濃巧克力蛋糕">
+              <p class="text-center">醇濃巧克力蛋糕</p>
             </div>
             
             <div class="modal fade" id="prodModal3" tabindex="-1" aria-labelledby="prodModal3Label" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="prodModal3Label">巧克力蛋糕</h5>
+                    <h5 class="modal-title" id="prodModal3Label">醇濃巧克力蛋糕</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                     <div class="row">
                       <div class="col-md-6">
-                        <img src="../images/sec3.jpg" class="img-fluid rounded" alt="巧克力蛋糕">
+                        <img src="../images/sec3.jpg" class="img-fluid rounded" alt="醇濃巧克力蛋糕">
                       </div>
                       <div class="col-md-6">
                         <p><strong>蛋糕編號：</strong> 03</p>
-                        <p><strong>蛋糕名字：</strong> 巧克力蛋糕</p>
-                        <p><strong>蛋糕價格：</strong> $95</p>
+                        <p><strong>蛋糕名字：</strong> 醇濃巧克力蛋糕</p>
+                        <p><strong>蛋糕價格：</strong> $100</p>
                         <form action="${pageContext.request.contextPath}/add-to-cart" method="post">
                       			<input type="hidden" name="cakeId" value="3"> <!-- 設置正確 商品cakeId -->
                       		<div class="mb-3">
@@ -309,8 +309,81 @@
                 </div>
               </div>
             </div>
+		
+		
+			<div class="col-12 com-sm-6 col-md-3 p-4" data-bs-toggle="modal" data-bs-target="#prodModal4">
+              <img src="../images/sec4.jpg" class="d-block mw-100 mx-auto rounded mb-2" alt="布朗巧克力蛋糕">
+              <p class="text-center">布朗巧克力蛋糕</p>
+            </div>
+            
+            <div class="modal fade" id="prodModal4" tabindex="-1" aria-labelledby="prodModal4Label" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="prodModal4Label">布朗巧克力蛋糕</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <img src="../images/sec4.jpg" class="img-fluid rounded" alt="布朗巧克力蛋糕">
+                      </div>
+                      <div class="col-md-6">
+                        <p><strong>蛋糕編號：</strong> 04</p>
+                        <p><strong>蛋糕名字：</strong> 布朗巧克力蛋糕</p>
+                        <p><strong>蛋糕價格：</strong> $100</p>
+                        <form action="${pageContext.request.contextPath}/add-to-cart" method="post">
+                      			<input type="hidden" name="cakeId" value="4"> <!-- 設置正確 商品cakeId -->
+                      		<div class="mb-3">
+                        	<label for="quantity4" class="form-label">蛋糕數量：</label>
+                        	<input type="number" class="form-control" id="quantity4" name="quantity" value="1" min="1">
+                      		</div>
+                      		<button type="submit" class="btn btn-primary">加入購物車</button>
+                    	</form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-
+		
+			<div class="col-12 com-sm-6 col-md-3 p-4" data-bs-toggle="modal" data-bs-target="#prodModal5">
+              <img src="../images/sec5.jpg" class="d-block mw-100 mx-auto rounded mb-2" alt="巧克力夾心蛋糕">
+              <p class="text-center">巧克力夾心蛋糕</p>
+            </div>
+            
+            <div class="modal fade" id="prodModal5" tabindex="-1" aria-labelledby="prodModal5Label" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="prodModal5Label">巧克力夾心蛋糕</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <img src="../images/sec5.jpg" class="img-fluid rounded" alt="巧克力夾心蛋糕">
+                      </div>
+                      <div class="col-md-6">
+                        <p><strong>蛋糕編號：</strong> 05</p>
+                        <p><strong>蛋糕名字：</strong> 巧克力夾心蛋糕</p>
+                        <p><strong>蛋糕價格：</strong> $100</p>
+                        <form action="${pageContext.request.contextPath}/add-to-cart" method="post">
+                      			<input type="hidden" name="cakeId" value="5"> <!-- 設置正確 商品cakeId -->
+                      		<div class="mb-3">
+                        	<label for="quantity5" class="form-label">蛋糕數量：</label>
+                        	<input type="number" class="form-control" id="quantity5" name="quantity" value="1" min="1">
+                      		</div>
+                      		<button type="submit" class="btn btn-primary">加入購物車</button>
+                    	</form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <!-- <div class="col-12 com-sm-6 col-md-3 p-4">
               <img src="" class="d-block mw-100 mx-auto rounded mb-2" data-bs-toggle="modal" data-bs-target="#prodModal" alt="">
               <p class="text-center"></p>
