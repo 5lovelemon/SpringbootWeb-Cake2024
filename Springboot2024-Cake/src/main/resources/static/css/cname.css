@@ -52,6 +52,7 @@
 	  box-sizing: border-box; /* 確保padding不影響元素總寬度 */
 	}
 	
+
 	button {
 	  width: 100%;
 	  padding: 10px;
@@ -101,6 +102,23 @@
 	
 	.form-group-checkbox .forgot-password {
 	  margin-left: auto;
+	}
+	
+	/* 驗證碼 */
+	.captcha-container {
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	}
+	
+	.captcha-container input {
+	  flex: 1;
+	}
+	
+	.captcha-container img {
+	  margin-left: 10px;
+	  height: 40px;
+	  cursor: pointer; /* 可以添加這個樣式讓圖片看起來可以點擊 */
 	}
 	
 	/* SweetAlert2 提示框 */
