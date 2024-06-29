@@ -27,7 +27,7 @@
   <div class="background-container">
     <div class="register-container">
       <h2>註冊新會員</h2>
-      <form id="registerForm" action="/register" method="post">
+      <form id="registerForm">
         <div class="form-group">
           <label for="username">姓名：</label>
           <input type="text" id="username" name="username" required>
@@ -81,7 +81,14 @@
       .then(response => response.json().then(data => ({ status: response.status, body: data })))
       .then(({ status, body }) => {
         if (status === 200) {
-          window.location.href = '/cname';
+          Swal.fire({
+            icon: 'success',
+            title: '會員註冊成功',
+            text: '點擊確定跳轉到登錄頁面',
+            confirmButtonText: '確定'
+          }).then(() => {
+            window.location.href = '/cname';
+          });
         } else {
           Swal.fire({
             icon: 'error',
