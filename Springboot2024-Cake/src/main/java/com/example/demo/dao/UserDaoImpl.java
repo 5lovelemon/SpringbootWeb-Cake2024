@@ -45,6 +45,17 @@ public class UserDaoImpl implements UserDao {
         }
     }
 
+    @Override // 根據用戶Phone 查詢用戶
+    public Optional<User> getUserByPhone(String phone) {
+        String sql = "SELECT * FROM user WHERE phone = ?";
+        try {
+            User user = jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(User.class), phone);
+            return Optional.ofNullable(user);
+        } catch (Exception e) {
+            return Optional.empty();
+        }
+    }
+
     @Override // 根據用戶Email 查詢用戶
     public Optional<User> getUserByEmail(String email) {
         String sql = "SELECT * FROM user WHERE email = ?";
@@ -55,7 +66,7 @@ public class UserDaoImpl implements UserDao {
             return Optional.empty();
         }
     }
-
+    
     @Override // 新增用戶
     public int createUser(User user) {
         String sql = "INSERT INTO user (username, email, phone, birthday, password, created_at) VALUES (?, ?, ?, ?, ?, ?)";
