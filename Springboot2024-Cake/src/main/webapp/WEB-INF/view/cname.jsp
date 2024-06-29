@@ -20,39 +20,8 @@
   
   <!-- 共用 CSS -->
   <link rel="stylesheet" href="./css/cname.css">
-   <link href="images/CAKE2_logo.png" rel="icon" type="image/x-ico">
-  <style>
-  
-    .form-group-checkbox {
-      display: flex;
-      align-items: center;
-    }
+  <link href="images/CAKE2_logo.png" rel="icon" type="image/x-ico">
 
-    .form-group-checkbox label {
-      margin-right: 10px;
-    }
-
-    .form-group-checkbox .forgot-password {
-      margin-left: auto;
-    }
-    
-    .swal2-container {
-      position: fixed !important;
-      top: 50% !important;
-      left: 50% !important;
-      transform: translate(-50%, -50%) !important;
-      z-index: 9999 !important; /* 保證彈窗在最上層 */
-      width: 100vw;
-      height: 100vh;
-    }
-    
-    .login-container {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  </style>
 </head>
 
 <body>
