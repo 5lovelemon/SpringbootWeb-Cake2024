@@ -13,6 +13,8 @@ public interface UserDao {
     Optional<User> findByUsername(String username);
    
     Optional<User> getUserByEmail(String email);
+    
+    Optional<User> getUserByPhone(String phone);
    
     int createUser(User user);
 
