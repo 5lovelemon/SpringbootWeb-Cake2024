@@ -19,9 +19,40 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.0/dist/sweetalert2.min.css">
   
   <!-- 共用 CSS -->
-  <link rel="stylesheet" href="./css/cname.css">
+  <link rel="stylesheet" href="./css/login.css">
    <link href="images/CAKE2_logo.png" rel="icon" type="image/x-ico">
-   
+  <style>
+  
+    .form-group-checkbox {
+      display: flex;
+      align-items: center;
+    }
+
+    .form-group-checkbox label {
+      margin-right: 10px;
+    }
+
+    .form-group-checkbox .forgot-password {
+      margin-left: auto;
+    }
+    
+    .swal2-container {
+      position: fixed !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+      z-index: 9999 !important; /* 保證彈窗在最上層 */
+      width: 100vw;
+      height: 100vh;
+    }
+    
+    .login-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
 </head>
 
 <body>
@@ -36,10 +67,6 @@
         <div class="form-group">
           <label for="password">密碼：</label>
           <input type="password" id="password" name="password" placeholder="請輸入密碼" required>
-        </div>
-        <div class="form-group">
-          <label for="captcha">驗證碼：</label>
-          <input type="text" id="captcha" name="captcha" placeholder="請輸入驗證碼" required>
         </div>
         <div class="form-group-checkbox">
           <input type="checkbox" id="keep-login" name="keep-login">
@@ -70,10 +97,9 @@
 
       var email = document.getElementById("email").value;
       var password = document.getElementById("password").value;
-      var captcha = document.getElementById("captcha").value;
 
       // 進行必要的驗證，例如檢查郵箱格式等
-      if (!email || !password || !captcha) {
+      if (!email || !password) {
         alert("請填寫完整的帳號和密碼！");
         return false;
       }
@@ -84,7 +110,6 @@
         body: new URLSearchParams({
           email: email,
           password: password
-          captcha: captcha
         })
       })
       .then(response => {
@@ -118,7 +143,6 @@
         });
       });
     });
-    
   </script>
 
 </body>
