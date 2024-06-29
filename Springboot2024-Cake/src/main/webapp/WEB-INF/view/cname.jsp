@@ -13,36 +13,33 @@
     content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
   <meta charset="UTF-8">
   <title>會員登入</title>
-  <link rel="stylesheet" href="./css/login.css">
+  
+  <!-- 外部 CSS -->
+  <!-- sweetalert2  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.0/dist/sweetalert2.min.css">
+  
+  <!-- 共用 CSS -->
+  <link rel="stylesheet" href="./css/cname.css">
    <link href="images/CAKE2_logo.png" rel="icon" type="image/x-ico">
-  <style>
-    .form-group-checkbox {
-      display: flex;
-      align-items: center;
-    }
-
-    .form-group-checkbox label {
-      margin-right: 10px;
-    }
-
-    .form-group-checkbox .forgot-password {
-      margin-left: auto;
-    }
-  </style>
+   
 </head>
 
 <body>
   <div class="background-container">
     <div class="login-container">
       <h2>會員登入</h2>
-      <form action="/cname" method="post" onsubmit="return validateForm()">
+      <form id="loginForm" action="/cname" method="post">
         <div class="form-group">
           <label for="email">帳號：</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" placeholder="請輸入信箱" required>
         </div>
         <div class="form-group">
           <label for="password">密碼：</label>
-          <input type="password" id="password" name="password" required>
+          <input type="password" id="password" name="password" placeholder="請輸入密碼" required>
+        </div>
+        <div class="form-group">
+          <label for="captcha">驗證碼：</label>
+          <input type="text" id="captcha" name="captcha" placeholder="請輸入驗證碼" required>
         </div>
         <div class="form-group-checkbox">
           <input type="checkbox" id="keep-login" name="keep-login">
@@ -52,32 +49,78 @@
         <button type="submit">登入</button>
       </form>
       <div class="register-link">
-  		<div style="float: left;">
-    		還不是會員？<a href="/account">註冊會員</a>
-  		</div>
-  			<div style="float: right;">
-    			<a href="/cake">返回首頁</a>
-  			</div>
-  		<div style="clear: both;">
-  		</div>
-	  </div>
+        <div style="float: left;">
+          還不是會員？<a href="/account">註冊會員</a>
+        </div>
+        <div style="float: right;">
+          <a href="/cake">返回首頁</a>
+        </div>
+        <div style="clear: both;"></div>
+      </div>
     </div>
   </div>
-</body>
 
-	<script>
-	function validateForm() {
-	  var email = document.getElementById("email").value;
-	  var password = document.getElementById("password").value;
-	  
-	  // 进行必要的验证，例如检查邮箱格式等
-	  if (!email || !password) {
-	    alert("請填寫完整的帳號和密碼！");
-	    return false;
-	  }
-	  
-	  return true;
-	}
-	</script>
+  <!-- 引入 SweetAlert2 的 JavaScript 庫 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.0/dist/sweetalert2.all.min.js"></script>
+  
+  <script>
+    // 監聽表單提交事件
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // 阻止默認的表單提交行為
+
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var captcha = document.getElementById("captcha").value;
+
+      // 進行必要的驗證，例如檢查郵箱格式等
+      if (!email || !password || !captcha) {
+        alert("請填寫完整的帳號和密碼！");
+        return false;
+      }
+
+      // 使用 fetch 發起登入請求
+      fetch("/cname", {
+        method: "POST",
+        body: new URLSearchParams({
+          email: email,
+          password: password
+          captcha: captcha
+        })
+      })
+      .then(response => {
+        if (response.ok) {
+          // 登入成功
+          Swal.fire({
+            icon: 'success',
+            title: '登入成功！',
+            showConfirmButton: false,
+            timer: 1500
+          }).then(() => {
+            window.location.href = "/cake"; // 跳轉到首頁
+          });
+        } else {
+          // 登入失敗
+          Swal.fire({
+            icon: 'error',
+            title: '登入失敗',
+            text: '用戶名或密碼錯誤',
+            confirmButtonText: '確定'
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        Swal.fire({
+          icon: 'error',
+          title: '登入失敗',
+          text: '發生錯誤，請稍後再試',
+          confirmButtonText: '確定'
+        });
+      });
+    });
+    
+  </script>
+
+</body>
 
 </html>
