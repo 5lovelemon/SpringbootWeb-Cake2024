@@ -33,6 +33,11 @@ public class UserService {
         return userDao.getUserByEmail(email);
     }
 
+    // 根據用戶Phone查詢用戶
+    public Optional<User> getUserByPhone(String phone) {
+        return userDao.getUserByPhone(phone);
+    }
+    
     // 註冊用戶
     public String createUser(UserDto userDto) {
         if (!userDto.getPassword().equals(userDto.getConfirmPassword())) {
