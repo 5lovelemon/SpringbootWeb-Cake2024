@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.0/dist/sweetalert2.min.css">
   
   <!-- 共用 CSS -->
-  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./css/cname.css">
    <link href="images/CAKE2_logo.png" rel="icon" type="image/x-ico">
   <style>
   
