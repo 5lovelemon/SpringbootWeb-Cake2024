@@ -49,8 +49,8 @@ public class UserService {
         user.setEmail(userDto.getEmail());
         user.setPhone(userDto.getPhone());
         user.setBirthday(userDto.getBirthday());
-        user.setPassword(userDto.getPassword()); // 直接保存密码
-        user.setCreated_at(LocalDateTime.now()); // 设置创建时间
+        user.setPassword(userDto.getPassword()); // 直接保存密碼
+        user.setCreated_at(LocalDateTime.now()); // 設置創建時間
 
         int result = userDao.createUser(user);
 
