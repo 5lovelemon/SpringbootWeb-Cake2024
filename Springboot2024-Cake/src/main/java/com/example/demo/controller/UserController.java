@@ -1,7 +1,5 @@
 package com.example.demo.controller;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +15,6 @@ import com.example.demo.model.po.User;
 import com.example.demo.service.UserService;
 
 import jakarta.servlet.http.HttpSession;
-import jakarta.validation.Valid;
 
 @Controller
 @RequestMapping
@@ -29,42 +26,17 @@ public class UserController {
     // 用戶註冊頁面
     @GetMapping("/account")
     public String showRegisterForm() {
-    	
         return "account";
     }
 
     @PostMapping("/register")
-    @ResponseBody
-    public ResponseEntity<Map<String, String>> registerUser(@RequestBody @Valid UserDto userDto) {
-        Map<String, String> response = new HashMap<>();
-    	
-    	// 檢查郵箱是否已註冊
-        Optional<User> existingUserByEmail = userService.getUserByEmail(userDto.getEmail());
-        if (existingUserByEmail.isPresent()) {
-            response.put("message", "該信箱已被註冊");
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
-        }
-        
-        // 檢查手機號碼是否已註冊
-        Optional<User> existingUserByPhone = userService.getUserByPhone(userDto.getPhone());
-        if (existingUserByPhone.isPresent()) {
-            response.put("message", "該手機號碼已被註冊");
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
-        }
-        
-        // 密碼是否為空
-        if (userDto.getPassword() == null || userDto.getPassword().isEmpty()) {
-            response.put("message", "密碼不能為空");
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
-        }
-        
-        // 如果郵箱和手機號碼都未被註冊，就繼續執行註冊邏輯
+    public String registerUser(@ModelAttribute UserDto userDto, Model model) {
         String message = userService.createUser(userDto);
-        response.put("message", message);
+        model.addAttribute("message", message);
         if (message.equals("會員註冊成功")) {
-            return ResponseEntity.ok(response);
+            return "redirect:/cname"; // 重新定向到登入頁面
         } else {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+            return "account"; // 保留在注册页面
         }
     }
     
