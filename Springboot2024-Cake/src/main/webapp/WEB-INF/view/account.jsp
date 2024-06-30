@@ -57,9 +57,13 @@
       <div class="register-link">
         已經有帳號？<a href="/cname">立即登入</a>
       </div>
+      <c:if test="${not empty message}">
+        <div class="alert ${message eq '會員註冊成功' ? 'alert-success' : 'alert-danger'}">
+          ${message}
+        </div>
+      </c:if>
     </div>
   </div> 	
-  	
 </body>
 
 </html>
