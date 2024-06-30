@@ -33,7 +33,9 @@ public class UserController {
     public String registerUser(@ModelAttribute UserDto userDto, Model model) {
         String message = userService.createUser(userDto);
         model.addAttribute("message", message);
+        System.out.println("Registration message: " + message);  // 调试日志
         if (message.equals("會員註冊成功")) {
+        	System.out.println("Redirecting to login page");  // 调试日志
             return "redirect:/cname"; // 重新定向到登入頁面
         } else {
             return "account"; // 保留在注册页面
