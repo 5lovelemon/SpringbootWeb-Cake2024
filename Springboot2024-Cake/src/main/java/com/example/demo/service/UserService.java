@@ -43,6 +43,18 @@ public class UserService {
         if (!userDto.getPassword().equals(userDto.getConfirmPassword())) {
             return "密碼和確認密碼不匹配";
         }
+        
+    // 檢查郵箱是否已註冊
+    Optional<User> existingUserByEmail = getUserByEmail(userDto.getEmail());
+    	if (existingUserByEmail.isPresent()) {
+    		return "該信箱已被註冊";
+        }
+
+    // 檢查手機號碼是否已註冊
+    Optional<User> existingUserByPhone = getUserByPhone(userDto.getPhone());
+        if (existingUserByPhone.isPresent()) {
+            return "該手機號碼已被註冊";
+        }    
 
         User user = new User();
         user.setUsername(userDto.getUsername());
