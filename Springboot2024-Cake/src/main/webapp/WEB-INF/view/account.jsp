@@ -27,7 +27,7 @@
   <div class="background-container">
     <div class="register-container">
       <h2>註冊新會員</h2>
-      <form id="registerForm">
+      <form action="/register" method="post">
         <div class="form-group">
           <label for="username">姓名：</label>
           <input type="text" id="username" name="username" required>
@@ -58,56 +58,8 @@
         已經有帳號？<a href="/cname">立即登入</a>
       </div>
     </div>
-  </div>
-  
-  <!-- 引入 SweetAlert2 的 JavaScript 庫 -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.0/dist/sweetalert2.all.min.js"></script>
-  
-  <script>
-    // 監聽表單提交事件
-    document.getElementById('registerForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const formData = new FormData(this);
-      const jsonData = Object.fromEntries(formData.entries());
-
-      fetch('/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(jsonData)
-      })
-      .then(response => response.json().then(data => ({ status: response.status, body: data })))
-      .then(({ status, body }) => {
-        if (status === 200) {
-          Swal.fire({
-            icon: 'success',
-            title: '會員註冊成功',
-            text: '點擊確定跳轉到登錄頁面',
-            confirmButtonText: '確定'
-          }).then(() => {
-            window.location.href = '/cname';
-          });
-        } else {
-          Swal.fire({
-            icon: 'error',
-            title: '註冊失敗',
-            text: body.message
-          });
-        }
-      })
-      .catch(error => {
-        Swal.fire({
-          icon: 'error',
-          title: '註冊失敗',
-          text: '發生未知錯誤，請稍後再試'
-        });
-        console.error('Error:', error);
-      });
-    });
-  </script>
-  
+  </div> 	
+  	
 </body>
 
 </html>
