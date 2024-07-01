@@ -185,8 +185,9 @@
     </div>
 
   </section>
-
-  <section id="sec1">
+	
+	
+	<section id="sec1">
     <div class="d-none d-md-block text-center" style="color: rgb(245, 85, 119);">
       <h2 style="font-size: 36px" id="mainContent" tabindex="2">
         最新消息
@@ -215,35 +216,30 @@
             </div>
 
 
-
-
-
-            <!--   header============
+  <!--   header============
   當桌機版時....那麼進行以下工作
   當window視窗scroll捲動時
   if判斷捲出的範圍是否大於header的高度
   如果是，則header應該......addClass('fixed')
   安排 .fixed得樣式設定 for CSS 提示：position -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
-            <script>
-              if ($('.navbar-toggler').is(':hidden')) {
-                $(window).on('scroll', function () {
-                  if ($('html').scrollTop() > $('header').innerHeight()) {
-                    // console.log('yes');
-                    $('header').addClass('fixed');
-                  }
-                  if ($('html').scrollTop() == 0) {
-                    $('header').removeClass('fixed');
-                  }
-                });
-              }
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+  <script>
+  if ($('.navbar-toggler').is(':hidden')) {
+    $(window).on('scroll', function () {
+      if ($('html').scrollTop() > $('header').innerHeight()) {
+        // console.log('yes');
+          $('header').addClass('fixed');
+     }
+      if ($('html').scrollTop() == 0) {
+          $('header').removeClass('fixed');
+     }
+  });
+}
 
-            </script>
+</script>
 
-            <footer>
-
-            </footer>
+<footer>By Xiao Ya-Fang @ Cake Web</footer>
 
 </body>
 
