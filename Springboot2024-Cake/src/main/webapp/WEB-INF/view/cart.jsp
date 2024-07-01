@@ -26,18 +26,21 @@
     <!-- 導航欄 -->
     <header class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-xl">
+        
         <a class="navbar-brand d-flex align-items-center" href="#">
             <img src="./images/CAKE2_logo.png" width="80px" alt="CAKE_LOGO">
+            <!-- 導覽列LOGO文字, m-0 垂直置中, ms-3 與LOGO有距離 -->
             <h1 class="m-0 ms-2">CAKE</h1>
         </a>
 
-        <!-- 漢堡選單按鈕 -->
-        <button class="navbar-toggler ctr-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
-            aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <!-- 手機版的漢堡圖 -->
+      <!-- 注意!! data-bs-target="名字必須與可收合部分的ID相同" -->
+      <button class="navbar-toggler ctr-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- 導航選單 -->
+        <!-- 導覽選單 -->
         <nav class="collapse navbar-collapse" id="navbarMenu">
         
             <ul class="navbar-nav ms-auto mb-2 text-center">
