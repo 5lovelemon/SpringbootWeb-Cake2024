@@ -12,6 +12,12 @@ public class AllController {
         return "cake"; // 返回蛋糕首頁
     }
     
+	// 顯示關於我們
+    @GetMapping("/about")
+    public String showaboutPage() {
+        return "about"; // 返回關於我們頁面
+    }
+    
     // 顯示購物須知
     @GetMapping("/shoppingnote")
     public String showShoppingPage() {
