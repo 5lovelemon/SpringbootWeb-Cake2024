@@ -97,7 +97,7 @@
           Swal.fire({
             icon: 'error',
             title: '登入失敗',
-            text: '用戶名或密碼錯誤',
+            text: '用戶信箱或密碼錯誤',
             confirmButtonText: '確定'
           });
         }

@@ -91,7 +91,7 @@
     	<c:if test="${empty sessionScope.loggedInUser}">
           <!-- 未登入時顯示登入連結 -->
           <li class="nav-item">
-            <a class="nav-link" href="/cname">登入</a>
+            <a class="nav-link" href="/cname">會員登入</a>
           </li>
           
         </c:if>
@@ -102,7 +102,7 @@
           
           <!-- 已登入時顯示登出連結 -->
           <li class="nav-item">
-            <a class="nav-link" href="/logout">登出</a>
+            <a class="nav-link" href="/logout">會員登出</a>
           </li>
         </c:if>
 
