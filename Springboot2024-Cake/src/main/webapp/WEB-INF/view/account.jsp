@@ -46,24 +46,25 @@
         </div>
         <div class="form-group">
           <label for="password">密碼：</label>
-          <input type="password" id="password" name="password" required>
+          <input type="password" id="password" name="password" autocomplete="new-password" required>
         </div>
         <div class="form-group">
           <label for="confirmPassword">確認密碼：</label>
-          <input type="password" id="confirmPassword" name="confirmPassword" required>
+          <input type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password" required>
         </div>
         <button type="submit">註冊</button>
       </form>
       <div class="register-link">
         已經有帳號？<a href="/cname">立即登入</a>
       </div>
-      <c:if test="${not empty message}">
+	  <c:if test="${not empty message}">
         <div class="alert ${message eq '會員註冊成功' ? 'alert-success' : 'alert-danger'}">
           ${message}
         </div>
       </c:if>
     </div>
-  </div> 	
+  </div>
+  	
 </body>
 
 </html>
