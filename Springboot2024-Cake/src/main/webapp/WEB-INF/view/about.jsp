@@ -119,9 +119,9 @@
             <a class="nav-link active" href="/about">關於我們</a>
           </li>
 
-          <!-- 根据登录状态显示不同的链接 -->
+          <!-- 根據登入狀態顯示不同的連結 -->
     	<c:if test="${empty sessionScope.loggedInUser}">
-          <!-- 未登录时显示登录链接 -->
+          <!-- 未登入時顯示登入連結 -->
           <li class="nav-item">
             <a class="nav-link" href="/cname">登入</a>
           </li>
@@ -132,7 +132,7 @@
             <a class="nav-link" href="/cart">購物車</a>
           </li>
           
-          <!-- 已登录时显示登出链接 -->
+          <!-- 已登入時顯示登出連結 -->
           <li class="nav-item">
             <a class="nav-link" href="/logout">登出</a>
           </li>
