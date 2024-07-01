@@ -60,6 +60,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
+	  <!-- 導覽選單 -->
       <nav class="collapse navbar-collapse" id="navbarMenu">
 
         <!-- 文字按鈕選單的部分 -->
@@ -105,7 +106,7 @@
           </li>
         </c:if>
 
-
+		</ul>
       </nav>
     </div>
 
