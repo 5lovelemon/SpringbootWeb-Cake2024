@@ -68,7 +68,7 @@ section {
 
 
 section h2 {
-  background-image: url(./images/cake/h1bg.png);
+  background-image: url(../images/cake/h1bg.png);
   background-repeat: no-repeat;
   background-position: center;
   font-family: var(--f-family-1);
@@ -129,7 +129,7 @@ section h2 {
   .navbar-dark .navbar-nav .nav-link:focus,
   .navbar-dark .navbar-nav .nav-link:hover {
     color: rgba(255, 255, 255, 1);
-    background-image: url(./images/cake/btn_hover.png);
+    background-image: url(../images/cake/btn_hover.png);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 100px;
