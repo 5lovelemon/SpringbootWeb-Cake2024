@@ -83,7 +83,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">關於我們</a>
+            <a class="nav-link" href="/about">關於我們</a>
           </li>
 
           <!-- 根據登入狀態顯示不同的連結 -->
