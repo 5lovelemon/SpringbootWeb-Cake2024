@@ -76,6 +76,20 @@ section h2 {
   text-align: center;
 }
 
+/* 頁尾 */
+footer {
+  background: linear-gradient(
+        90deg, 
+        var(--c-assist2-10), 
+        var(--c-assist1-10), 
+        var(--c-assist2-10)
+      );
+  text-align: center;
+  letter-spacing: 1.5px;
+  bottom: 0;
+  width: 100%;
+}
+
 /* 滑鼠變成手 */
 .curpointer {
   cursor: pointer;
@@ -84,7 +98,12 @@ section h2 {
 /* header area ==================================== */
 /* 導覽列顏色 */
 .navbar {
-  background: var(--c-nav-10);
+  background: linear-gradient(
+        90deg, 
+        var(--c-assist2-10), 
+        var(--c-assist1-10), 
+        var(--c-assist2-10)
+      );
 }
 
 /* 導覽列圖片,改變大小,寬、高度 */

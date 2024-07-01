@@ -1,5 +1,51 @@
 @charset "UTF-8";
 
+	/* 設定變數統一的資訊 (色彩、數據、字體) */
+	:root {
+	  /* 主要 */
+	  --c-nav-10: rgb(0, 183, 255);
+	  --c-nav-05: rgba(0, 183, 255, 0.5);
+	  --c-nav-00: rgba(0, 183, 255, 0.0);
+	
+	  /*上+32, 上+03, 上+32  */
+	  --c-assist1-10: rgba(35, 186, 223, 1.0);
+	  --c-assist1-07: rgba(35, 186, 223, 0.7);
+	
+	  /*上+26, 上+17, 上+30 */
+	  --c-assist2-10: rgba(51, 203, 193, 1.0);
+	  --c-assist2-03: rgba(51, 203, 193, 0.3);
+	  --c-assist2-01: rgba(51, 203, 193, 0.1);
+	  --c-assist2-00: rgba(51, 203, 193, 0.0);
+	
+	  --c-point: red;
+	
+	  /* 使用中文、英文,如果都無就變成襯線字體 */
+	  --f-family-1: "Righteous", "Noto Sans TC", sans-serif;
+	}
+	
+	/* 配合字體的class ==================================== */
+	/* 英文字體 */
+	.righteous {
+	  font-family: "Righteous", sans-serif;
+	}
+	
+	/* 中文字體 */
+	.noto-sans {
+	  font-family: "Noto Sans TC", sans-serif;
+	}
+	
+	/* 字體組合成一起,名字各取一部分,英文要放前面中文放後面,字體電腦的無襯線字體sans-serif*/
+	.rigt-noto {
+	  font-family: "Righteous", "Noto Sans TC", sans-serif;
+	}
+	
+	
+	/* 整體預設 & 跨區共用 ==================================== */
+	* {
+	  margin: 0;
+	  box-sizing: border-box;
+	}
+	
 	body {
 	  font-family: Arial, sans-serif;
 	  margin: 0;
@@ -8,7 +54,12 @@
 	  justify-content: center;
 	  align-items: center;
 	  height: 100vh;
-	  background-color: #6fb5f3; /* 淺藍色背景 */
+	  background: linear-gradient(
+        90deg, 
+        var(--c-assist2-10), 
+        var(--c-assist1-10), 
+        var(--c-assist2-10)
+      );
 	}
 	
 	.background-container {
@@ -95,7 +146,6 @@
       height: 100vh;
       margin: 0;
       padding: 0;
-      background-color: #6fb5f3; /* 淺藍色背景 */
       font-family: Arial, sans-serif; /* 使用常見的 sans-serif 字體 */
     }
     .register-container {
