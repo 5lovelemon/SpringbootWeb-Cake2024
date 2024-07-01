@@ -68,7 +68,7 @@ section {
 
 
 section h2 {
-  background-image: url(../images/cake/h1bg.png);
+  background:url("../images/h1bg.png");
   background-repeat: no-repeat;
   background-position: center;
   font-family: var(--f-family-1);
