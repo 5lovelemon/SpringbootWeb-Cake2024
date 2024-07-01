@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
+<%@ taglib prefix="sp" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 
@@ -12,7 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
 
   <!-- 共用的CSS -->
-  <link rel="stylesheet" href="./cake.css">
+  <link rel="stylesheet" href="./css/cake.css">
 
   <!-- 專屬頁面的CSS -->
   <style>
@@ -101,7 +104,7 @@
         <ul class="navbar-nav ms-auto mb-2 text-center">
 
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/cake">最新消息</a>
+            <a class="nav-link" aria-current="page" href="/cake">最新消息</a>
           </li>
 
           <li class="nav-item">
@@ -113,7 +116,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/about">關於我們</a>
+            <a class="nav-link active" href="/about">關於我們</a>
           </li>
 
           <!-- 根据登录状态显示不同的链接 -->
