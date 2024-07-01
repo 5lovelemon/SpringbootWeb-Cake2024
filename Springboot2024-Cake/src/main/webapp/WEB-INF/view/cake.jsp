@@ -99,7 +99,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">關於我們</a>
+            <a class="nav-link" href="/about">關於我們</a>
           </li>
 
           <!-- 根据登录状态显示不同的链接 -->
@@ -121,10 +121,10 @@
           </li>
         </c:if>
 
-
+		</ul>
       </nav>
       
-        </ul>
+        
     </div>
 
   </header>
