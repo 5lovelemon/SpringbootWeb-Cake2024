@@ -150,7 +150,7 @@
     <div class="container map-info-container">
       <div class="map">
         <!-- Google地圖嵌入代碼 -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.0413704224956!2d121.46201311536102!3d25.0110733440945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681f0e25fbf793%3A0x9e0b1e404ec708a0!2z5paw5YyX5biC5Y2A5ZyL5qiC6LOH5Y2A6KGTMjPomZ8!5e0!3m2!1szh-TW!2stw!4v1627193742071!5m2!1szh-TW!2stw" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.9402449551717!2d121.45793971070017!3d25.00214633948144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346802a430f295a7%3A0x64acaedc5e3f69f9!2zMjIw5paw5YyX5biC5p2_5qmL5Y2A5b-g5a2d6LevMjPomZ8x5qiT!5e0!3m2!1szh-TW!2stw!4v1719817370342!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="info">
         <p><strong>門市地址:</strong> 新北市板橋區忠孝路23號1樓</p>
@@ -183,9 +183,7 @@
     }
   </script>
 
-  <footer>
-  by Xiao Ya-Fang
-  </footer>
+<footer>By Xiao Ya-Fang @ Cake Web</footer>
 
 </body>
 
