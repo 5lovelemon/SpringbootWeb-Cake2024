@@ -1,4 +1,7 @@
---建立用戶
+-- 創建蛋糕訂購系統的資料庫
+CREATE DATABASE cakeweb;
+
+-- 建立用戶
 CREATE TABLE user (
     userid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
@@ -9,7 +12,7 @@ CREATE TABLE user (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
---建立 蛋糕商品
+-- 建立 蛋糕商品
 CREATE TABLE product (
     cakeid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     cakename VARCHAR(100) NOT NULL,
@@ -18,7 +21,7 @@ CREATE TABLE product (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
---訂單 # 因order在mysql是關鍵字，所以要加上反引號" ` "
+-- 訂單 # 因order在mysql是關鍵字，所以要加上反引號" ` "
 CREATE TABLE orders (
     orderid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     userid INT NOT NULL,
@@ -31,7 +34,7 @@ CREATE TABLE orders (
     FOREIGN KEY (cakeid) REFERENCES product (cakeid)
 );
 
---付款
+-- 付款
 CREATE TABLE payment (
     paymentid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     orderid INT NOT NULL,
