@@ -19,6 +19,32 @@
   <!-- 共用的CSS -->
   <link rel="stylesheet" href="./css/cake.css">
   <link href="images/CAKE2_logo.png" rel="icon" type="image/x-ico">
+  
+  <style>
+  
+   html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #e1f0ef;
+            text-align: center;
+            <!--padding: 10px 0;-->
+        }
+
+  </style>
+  
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbarMenu" data-bs-offset="0">
