@@ -84,6 +84,7 @@
       cursor: pointer;
     }
     
+    
   </style>
 
 </head>
@@ -163,7 +164,6 @@
         </c:if>
 
 
-
           <!-- 可以是搜尋用的表單 -->
           <!-- <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -187,8 +187,8 @@
           aria-controls="p2" aria-selected="false">草莓系列</button>
         <button class="nav-link" id="p3-tab" data-bs-toggle="tab" data-bs-target="#p3" type="button" role="tab"
           aria-controls="p3" aria-selected="false">抹茶系列</button>
-        <button class="nav-link" id="p3-tab" data-bs-toggle="tab" data-bs-target="#p3" type="button" role="tab"
-          aria-controls="p3" aria-selected="false">芒果系列</button>
+        <button class="nav-link" id="p4-tab" data-bs-toggle="tab" data-bs-target="#p4" type="button" role="tab"
+          aria-controls="p4" aria-selected="false">芒果系列</button>
       </div>
     </nav>
 
@@ -539,7 +539,6 @@
 
       </div>
 
-
       <div class="tab-pane fade" id="p2" role="tabpanel" aria-labelledby="p2-tab">
 
         <div class="container-xl">
@@ -776,11 +775,14 @@
               </div>
             </div>
             
+          </div>
+         </div>
+        </div>     
 
             
 
-		
 	 <div class="tab-pane fade" id="p4" role="tabpanel" aria-labelledby="p4-tab">
+	 
         <div class="container-xl">
           <div class="row">
 
@@ -802,7 +804,7 @@
                         <img src="../images/sed1.jpg" class="img-fluid rounded" alt="芒果蛋糕">
                       </div>
                       <div class="col-md-6">
-                        <p><strong>蛋糕編號：</strong> 41</p>
+                        <p><strong>蛋糕編號：</strong> 31</p>
                         <p><strong>蛋糕名字：</strong> 芒果蛋糕</p>
                         <p><strong>蛋糕價格：</strong> $180</p>
                         <form action="${pageContext.request.contextPath}/add-to-cart" method="post">
@@ -876,7 +878,7 @@
                         <img src="../images/sed3.jpg" class="img-fluid rounded" alt="香橙芒果">
                       </div>
                       <div class="col-md-6">
-                        <p><strong>蛋糕編號：</strong> 43</p>
+                        <p><strong>蛋糕編號：</strong> 33</p>
                         <p><strong>蛋糕名字：</strong> 香橙芒果</p>
                         <p><strong>蛋糕價格：</strong> $150</p>
                         <form action="${pageContext.request.contextPath}/add-to-cart" method="post">
