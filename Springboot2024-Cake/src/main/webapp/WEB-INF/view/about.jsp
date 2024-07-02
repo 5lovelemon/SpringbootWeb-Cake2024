@@ -43,7 +43,7 @@
     .map iframe {
       display: block;
       width: 100%;
-      height: 400px; /* 手机板高度 */
+      height: 600px; /* 桌面版高度 */
       border: none;
     }
 
@@ -54,14 +54,34 @@
 
     h2 {
       text-align: center;
-      margin-bottom: 30px; /* 调整这个值以增加标题和内容之间的间距 */
+      margin-bottom: 30px; /* 增加標題與內容的間隔 */
     }
-
-    @media (min-width: 768px) {
+	
+	/* 手機版樣式 */
+    @media (max-width: 767px) {
       .map iframe {
-        height: 600px; /* 桌面版高度 */
+        height: 400px; /* 手機版高度 */
+      }
+
+      .map-info-container {
+        padding: 10px;
+      }
+
+      .map {
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 15px;
+        padding: 5px 0; /* 增加內邊距 */
+        text-align: left; /* 文字左對齊 */
       }
     }
+
   </style>
 </head>
 
