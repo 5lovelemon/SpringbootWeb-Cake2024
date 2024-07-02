@@ -197,7 +197,7 @@
       <div class="tab-pane fade show active" id="p1" role="tabpanel" aria-labelledby="p1-tab">
         
         <div class="container-xl">
-          <div class="row">
+          <div class="row" data-prod-class="巧克力系列">
 
             <!-- d-block 文字一定下去,w-100縮小 一定百分百, mw-100 最大寬度百分百 -->
             <div class="col-12 com-sm-6 col-md-3 p-4" data-bs-toggle="modal" data-bs-target="#prodModal1">
@@ -542,7 +542,7 @@
       <div class="tab-pane fade" id="p2" role="tabpanel" aria-labelledby="p2-tab">
 
         <div class="container-xl">
-          <div class="row">
+          <div class="row" data-prod-class="草莓系列">
 
             <div class="col-12 com-sm-6 col-md-3 p-4" data-bs-toggle="modal" data-bs-target="#prodModal11">
               <img src="../images/seb1.jpg" class="d-block mw-100 mx-auto rounded mb-2" alt="甜蜜約定">
@@ -700,7 +700,7 @@
       <div class="tab-pane fade" id="p3" role="tabpanel" aria-labelledby="p3-tab">
       
         <div class="container-xl">
-          <div class="row">
+          <div class="row" data-prod-class="抹茶系列">
 
             <div class="col-12 com-sm-6 col-md-3 p-4" data-bs-toggle="modal" data-bs-target="#prodModal21">
               <img src="../images/sec1.jpg" class="d-block mw-100 mx-auto rounded mb-2" alt="抹茶千層蛋糕">
@@ -784,7 +784,7 @@
 	 <div class="tab-pane fade" id="p4" role="tabpanel" aria-labelledby="p4-tab">
 	 
         <div class="container-xl">
-          <div class="row">
+          <div class="row" data-prod-class="芒果系列">
 
             <div class="col-12 com-sm-6 col-md-3 p-4" data-bs-toggle="modal" data-bs-target="#prodModal31">
               <img src="../images/sed1.jpg" class="d-block mw-100 mx-auto rounded mb-2" alt="芒果蛋糕">
