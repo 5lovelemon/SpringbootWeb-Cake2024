@@ -66,7 +66,6 @@ section {
   background-position: center; */
 }
 
-
 section h2 {
   background:url("../images/h1bg.png");
   background-repeat: no-repeat;
@@ -142,7 +141,7 @@ footer {
 
 
 /* 此為電腦版 */
-@media (min-width: 760px) {
+@media (min-width: 768px) {
   
   /* 文字導覽按鈕滑入狀態 */
   .navbar-dark .navbar-nav .nav-link:focus,
