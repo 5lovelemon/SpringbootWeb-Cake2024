@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+/* 設定變數統一的資訊 (色彩、數據、字體) */
+:root {
+  /* 主要 */
+  --c-nav-10: rgb(0, 183, 255);
+  --c-nav-05: rgba(0, 183, 255, 0.5);
+  --c-nav-00: rgba(0, 183, 255, 0.0);
+
+  /*上+32, 上+03, 上+32  */
+  --c-assist1-10: rgba(35, 186, 223, 1.0);
+  --c-assist1-07: rgba(35, 186, 223, 0.7);
+
+  /*上+26, 上+17, 上+30 */
+  --c-assist2-10: rgba(51, 203, 193, 1.0);
+  --c-assist2-03: rgba(51, 203, 193, 0.3);
+  --c-assist2-01: rgba(51, 203, 193, 0.1);
+  --c-assist2-00: rgba(51, 203, 193, 0.0);
+
+  --c-point: red;
+
+  /* 使用中文、英文,如果都無就變成襯線字體 */
+  --f-family-1: "Righteous", "Noto Sans TC", sans-serif;
+}
+
+/* 配合字體的class ==================================== */
+/* 英文字體 */
+.righteous {
+  font-family: "Righteous", sans-serif;
+}
+
+/* 中文字體 */
+.noto-sans {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+/* 字體組合成一起,名字各取一部分,英文要放前面中文放後面,字體電腦的無襯線字體sans-serif*/
+.rigt-noto {
+  font-family: "Righteous", "Noto Sans TC", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+section {
+  min-height: 100vh;
+  padding-top: 140px;
+}
+
+section h2 {
+  background:url("../images/h1bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  
+  font-family: var(--f-family-1);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* 頁尾 */
+footer {
+  background: linear-gradient(
+        90deg, 
+        var(--c-assist2-10), 
+        var(--c-assist1-10), 
+        var(--c-assist2-10)
+      );
+  text-align: center;
+  letter-spacing: 1.5px;
+  bottom: 0;
+  width: 100%;
+}
+
+/* header area ==================================== */
+/* 導覽列顏色 */
+.navbar {
+  background: linear-gradient(
+    90deg, 
+    var(--c-assist2-10), 
+    var(--c-assist1-10), 
+    var(--c-assist2-10)
+  );
+}
+
+.navbar-brand img {
+  width: calc(50px + 2vw), 70px;
+  height: auto;
+}
+
+/* 導覽列文字 */
+.navbar-brand h1 {
+  width: min(calc (20px + 3vw), 22px);
+  height: auto;
+}
+
+/* 文字導覽按鈕一般狀態 */
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, .66);
+  font-family: var(--f-family-1);
+  letter-spacing: 2px; /* 文字間距 */
+  font-size: 16px; /* 文字大小 */
+}
+
+/* 文字導覽按鈕滑入狀態 */
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* 文字導覽按鈕目前作用中狀態 */
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .show>.nav-link {
+  color: #fff;
+}
+
+@media(min-width:768px) {
+
+  /* 文字導覽按鈕滑入狀態 */
+  .navbar-dark .navbar-nav .nav-link:focus,
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 1);
+    background-image: url(../images/btn_hover.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100px;
+    padding-top: 1px;
+  }
+
+  /* 文字導覽按鈕目前作用中狀態 */
+  .navbar-dark .navbar-nav .nav-link.active,
+  .navbar-dark .navbar-nav .show>.nav-link {
+    color: #fff;
+  }
+}

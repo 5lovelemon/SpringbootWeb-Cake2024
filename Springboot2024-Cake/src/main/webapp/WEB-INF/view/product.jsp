@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
 
   <!-- 共用的CSS -->
-  <link rel="stylesheet" href="./css/cake.css">
+  <link rel="stylesheet" href="./css/product.css">
   <link href="images/CAKE2_logo.png" rel="icon" type="image/x-ico">
 
   <!-- 專屬頁面的CSS -->
