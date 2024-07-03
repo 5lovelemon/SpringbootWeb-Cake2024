@@ -189,10 +189,6 @@
           aria-controls="p3" aria-selected="false">抹茶系列</button>
         <button class="nav-link" id="p4-tab" data-bs-toggle="tab" data-bs-target="#p4" type="button" role="tab"
           aria-controls="p4" aria-selected="false">芒果系列</button>
-        <button class="nav-link" id="p4-tab" data-bs-toggle="tab" data-bs-target="#p5" type="button" role="tab"
-          aria-controls="p5" aria-selected="false">未來增加</button>
-        <button class="nav-link" id="p4-tab" data-bs-toggle="tab" data-bs-target="#p6" type="button" role="tab"
-          aria-controls="p6" aria-selected="false">未來增加</button>
       </div>
     </nav>
 
