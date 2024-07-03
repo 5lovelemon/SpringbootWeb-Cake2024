@@ -61,9 +61,6 @@ body {
 section {
   min-height: 100vh;
   padding: 140px;
-  /* background-image: url(./images/Cake_images/shadow1.png);
-  background-repeat: no-repeat;
-  background-position: center; */
 }
 
 section h2 {
@@ -136,7 +133,7 @@ footer {
 /* 文字導覽按鈕目前作用中狀態 */
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .show>.nav-link {
-  color: #ff9d85;
+  color: #fff;
 }
 
 
